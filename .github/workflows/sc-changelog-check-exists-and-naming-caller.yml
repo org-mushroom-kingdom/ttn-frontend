@@ -1,0 +1,12 @@
+name: Frontend Changelog Check (Exists/Naming)
+
+on:
+    pull_request:
+        types: [opened, synchronize]
+        branches: 
+            - preprod
+            - main
+
+changelog-check:
+    uses:
+        # SOME REUSABLE WORKFLOW
