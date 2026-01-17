@@ -14,6 +14,6 @@ jobs:
         name: 'Call changelog-check reusable workflow'
         uses: org-mushroom-kingdom/ttn-workflows/.github/workflows/changelog-quality-checks.yml@main
         secrets:
-            # This token is needed to checkout the ttn-workflows repo. GITHUB_TOKEN is scoped to the repository the workflow is in, so it won't work
+            # This token is needed to checkout the ttn-workflows repo. GITHUB_TOKEN is scoped to the repository the workflow is in, so it won't work.
             token: ${{ secrets.REPO_ACCESS_TTN }}
         
