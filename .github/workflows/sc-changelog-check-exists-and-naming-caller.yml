@@ -2,6 +2,7 @@ name: Frontend Changelog Check (Exists/Naming)
 
 on:
     workflow_dispatch:
+    
     pull_request:
         types: [opened, synchronize]
         branches: 
@@ -12,7 +13,7 @@ jobs:
     changelog-check:
         name: 'Call changelog-check reusable workflow'
         uses: org-mushroom-kingdom/ttn-workflows/.github/workflows/changelog-quality-checks.yml@main
-        # secrets:
-        #     # This token is needed to checkout the ttn-workflows repo. GITHUB_TOKEN is scoped to the repository the workflow is in, so it won't work
-        #     token: ${{ secrets.MAKE_A_TOKEN }}
+        secrets:
+            # This token is needed to checkout the ttn-workflows repo. GITHUB_TOKEN is scoped to the repository the workflow is in, so it won't work
+            token: ${{ secrets.REPO_ACCESS_TTN }}
         
