@@ -8,4 +8,4 @@ It would be incorrect in cases like
 - The source branch name was release/v1.0, release/v1.2, etc.
 - The repository this CHANGELOG file was in was is ttn-backend
 
-Yippee
+Yippee!
