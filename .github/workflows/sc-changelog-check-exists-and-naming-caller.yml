@@ -11,6 +11,7 @@ on:
 
 jobs:
     changelog-check:
+        if: ${{ startsWith(github.head_ref, 'release')}}
         name: 'Call changelog-check reusable workflow'
         uses: org-mushroom-kingdom/ttn-workflows/.github/workflows/changelog-quality-checks.yml@main
         secrets:
