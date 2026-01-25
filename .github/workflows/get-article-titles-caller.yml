@@ -7,4 +7,6 @@ jobs:
     get-article-titles-caller:
         name: 'Get Article Titles Job'
         uses: org-mushroom-kingdom/ttn-workflows/.github/workflows/get-article-titles.yml@main
+        secrets:
+            gh-app-key: ${{ secrets.TTN_WORKFLOWS_GH_APP_PRIVATE_KEY }}
      
