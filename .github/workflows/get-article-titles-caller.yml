@@ -1,0 +1,10 @@
+name: Get Article Titles 
+
+on:
+    workflow_dispatch:
+
+jobs:
+    get-article-titles-caller:
+        name: 'Get Article Titles Job'
+        uses: org-mushroom-kingdom/ttn-workflows/.github/workflows/get-article-titles.yml@main
+     
