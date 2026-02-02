@@ -7,11 +7,11 @@ As of 1-20-26: This repo's true purpose is to showcase various ways a caller wor
 
 This section describes the workflows used in this repository. Note several of these are caller workflows; the brunt of business logic may be in the reusable workflow called. These reusable workflows are located in the org-mushroom-kingdom/ttn-workflows repo TO DO LINK unless otherwise noted.
 
-## Frontend Changelog Check (Exists/Naming)
+## sc-changelog-check-exists-and-naming-caller.yml (Frontend Changelog Check (Exists/Naming))
 
 Name: Frontend Changelog Check (Exists/Naming)
-Filename: sc-changelog-check-exists-and-naming-caller.yml
-Reusable Workflow Filename: XXXX.yml
+Filename: `sc-changelog-check-exists-and-naming-caller.yml`
+Reusable Workflow Filename: `org-mushroom-kingdom/ttn-workflows/.github/workflows/changelog-quality-checks.yml`
 
 ## Scenario
 
@@ -21,7 +21,7 @@ Refer to the Medium Article [Github Actions: Checking Out And Utilizing a Reusab
  
 ### Trigger
 
-The sc-changelog-check-exists-and-naming-caller.yml caller workflow will activate when a pull request is opened, synchronized, or reopened IF the pull request meets the following criteria:
+The `sc-changelog-check-exists-and-naming-caller.yml` caller workflow will activate when a pull request is opened, synchronized, or reopened IF the pull request meets the following criteria:
 -  The source branch is a release branch (begins with the string 'release') 
 -  The target branch is main 
 
