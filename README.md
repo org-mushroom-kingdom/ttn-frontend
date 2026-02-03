@@ -15,7 +15,9 @@ Reusable Workflow Filename: `org-mushroom-kingdom/ttn-workflows/.github/workflow
 
 ## Scenario
 
-This is an example of how a reusable workflow (XXXX.yml) can be called upon from a caller workflow, with the specific caveat that the reusable workflow needs to check out its own repository in order to run a script to perform the brunt of its logic. This requires passing a token present in the caller workflow repository to the reusable workflow repository.
+In this scenario, a caller workflow `ttn-frontend` (and `ttn-backend`) rely on the reusable workflow `changelog-quality-checks.yml` which checks for a changelog file (referred to hereon as a CHANGELOG file) when a pull request is made from a release branch to the main branch (See **__Triggers** for more details). The logic surrounding the CHANGELOG file is strict and the file must meet certain criteria before merging into the preprod or main branch is allowed (see **__Business Logic__** for details).
+
+This is an example of how a reusable workflow (changelog-quality-checks.yml) can be called upon from a caller workflow, with the specific caveat that the reusable workflow needs to check out its own repository in order to run a script to perform the brunt of its logic. This requires passing a token present in the caller workflow repository to the reusable workflow repository.
 
 Refer to the Medium Article [Github Actions: Checking Out And Utilizing a Reusable Workflow's Repository](https://pages.github.com/) for more details on this scenario as well as the ttn-workflows README TODO LINK
  
