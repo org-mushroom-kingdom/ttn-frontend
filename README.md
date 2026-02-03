@@ -23,9 +23,14 @@ Refer to the Medium Article [Github Actions: Checking Out And Utilizing a Reusab
  
 ### Trigger
 
-The `sc-changelog-check-exists-and-naming-caller.yml` caller workflow will activate when a pull request is opened, synchronized, or reopened IF the pull request meets the following criteria:
--  The source branch is a release branch (begins with the string 'release') 
--  The target branch is prepord main 
+The `sc-changelog-check-exists-and-naming-caller.yml` caller workflow will activate upon the following triggers:
+
+`workflow_dispatch`: This workflow can be triggered manually. TODO SEE MANUAL TESTING?
+
+`pull_request`: Triggered by a pull request being opened, synchronized, or reopened. This is <strong>in conjunction</strong> with the `branches` key
+`branches`: `preprod`, `main` (only merges to these branches will trigger the workflow in this way)
+
+Note: While this workflow will activate upon a proper `pull_request`/`branches` combo, it should be noted that the workflow will only perform actual work if the source branch is a release branch (begins with 'release'). Otherwise, all logic will be skipped.
 
 ### Business Logic
 
