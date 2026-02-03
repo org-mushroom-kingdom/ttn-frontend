@@ -17,15 +17,23 @@ Reusable Workflow Filename: `org-mushroom-kingdom/ttn-workflows/.github/workflow
 
 In this scenario, a caller workflow `ttn-frontend` (and `ttn-backend`) rely on the reusable workflow `changelog-quality-checks.yml` which checks for a changelog file (referred to hereon as a CHANGELOG file) when a pull request is made from a release branch to the main branch (See **__Triggers** for more details). The logic surrounding the CHANGELOG file is strict and the file must meet certain criteria before merging into the preprod or main branch is allowed (see **__Business Logic__** for details).
 
-This is an example of how a reusable workflow (changelog-quality-checks.yml) can be called upon from a caller workflow, with the specific caveat that the reusable workflow needs to check out its own repository in order to run a script to perform the brunt of its logic. This requires passing a token present in the caller workflow repository to the reusable workflow repository.
+This is an example of how a reusable workflow (`changelog-quality-checks.yml`) can be called upon from a caller workflow, with the specific caveat that the reusable workflow needs to check out its own repository in order to run a script to perform the brunt of its logic. This requires passing a token present in the caller workflow repository to the reusable workflow repository.
 
-Refer to the Medium Article [Github Actions: Checking Out And Utilizing a Reusable Workflow's Repository](https://pages.github.com/) for more details on this scenario as well as the ttn-workflows README TODO LINK
+Refer to the Medium Article [Github Actions: Checking Out And Utilizing a Reusable Workflow's Repository](https://blog.devops.dev/github-actions-checking-out-and-utilizing-a-reusable-workflows-repository-992adbe7b3ae) for more details on this scenario as well as the [ttn-workflows README](https://github.com/org-mushroom-kingdom/ttn-workflows/blob/main/README.md)
  
 ### Trigger
 
 The `sc-changelog-check-exists-and-naming-caller.yml` caller workflow will activate when a pull request is opened, synchronized, or reopened IF the pull request meets the following criteria:
 -  The source branch is a release branch (begins with the string 'release') 
--  The target branch is main 
+-  The target branch is prepord main 
+
+### Business Logic
+
+#### **Workflow Logic**
+
+The `sc-changelog-check-exists-and-naming-caller.yml` workflow consists of one job `get-article-titles-caller` which is simply a call to the reusable workflow `changelog-quality-checks.yml` in ttn-workflows. See the documentation about the reusable workflow in the [ttn-workflows README](https://github.com/org-mushroom-kingdom/ttn-workflows/blob/main/README.md). 
+
+A token with `repo` permissions is passed which allows the reusable workflow to checkout its own repo. 
 
 ## Get Article Titles
 
