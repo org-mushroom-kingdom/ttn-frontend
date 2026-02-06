@@ -40,12 +40,13 @@ The `sc-changelog-check-exists-and-naming-caller.yml` workflow consists of one j
 
 A token with `repo` permissions is passed which allows the reusable workflow to checkout its own repo. 
 
-## Get Article Titles
+## get-article-titles.yml (Get Article Titles)
 
-Name: TODO
-Filename: TODO
-Reusable Workflow: TODO
+Name: Get Article Titles
+Filename: `get-article-titles-caller.yml`
+Reusable Workflow: `org-mushroom-kingdom/ttn-workflows/.github/workflows/get-article-titles.yml`
 
 ## Scenario
 
-This is an example of how a reusable workflow (`get-article-titles.yml`) located in one repository (XXXX) can be called upon from a caller workflow in another repository, with the specific caveat that the reusable workflow needs to check out its own repository in order to read a file in that repository. It's very similar to **__Frontend Changelog Check__**'s scenario, but this time instead of using a PAT and passing that to the reusable workflow, we instead are going to use a Github App to create an installation access token. This time, TODO REWORD BURDEN the Github App must be installed on the reusable workflow's repository. 
+TODO MENTION ARTICLE 
+This is an example of how a reusable workflow (`get-article-titles.yml`) located in one repository (`ttn-workflows`) can be called upon from a caller workflow in another repository, with the specific caveat that the reusable workflow needs to check out its own repository in order to read a file in that repository. It's very similar to **__Frontend Changelog Check__**'s scenario, but this time instead of using a PAT and passing that to the reusable workflow, we instead are going to use a Github App to create an installation access token. This time, TODO REWORD BURDEN the Github App must be installed on the reusable workflow's repository. 
