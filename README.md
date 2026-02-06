@@ -48,5 +48,9 @@ Reusable Workflow: `org-mushroom-kingdom/ttn-workflows/.github/workflows/get-art
 
 ## Scenario
 
-TODO MENTION ARTICLE 
+TODO ARTICLE LINK ONCE DONE!!! 
+The code here is used as a supplement to the Medium article TODO CONFIRM TITLE 'Creating and Using a Basic Github App for Token Management in Workflows: A Guide'. Refer to that article for additional context and details.
+
+In this scenario, developers are working on integrating installation access tokens to move away from personal access token management. Devs have complained about having to make their own PATs and having to remember to refresh them when they expire (among other reasons), so a solution where tokens could be generated programmatically and not tied to a user would be an ideal situation. 
+
 This is an example of how a reusable workflow (`get-article-titles.yml`) located in one repository (`ttn-workflows`) can be called upon from a caller workflow in another repository, with the specific caveat that the reusable workflow needs to check out its own repository in order to read a file in that repository. It's very similar to **__Frontend Changelog Check__**'s scenario, but this time instead of using a PAT and passing that to the reusable workflow, we instead are going to use a Github App to create an installation access token. This time, the burden of the token is on reusable workflow's repository--the Github App must be installed on it. 
