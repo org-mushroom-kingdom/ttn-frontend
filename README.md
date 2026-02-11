@@ -48,8 +48,7 @@ Reusable Workflow: `org-mushroom-kingdom/ttn-workflows/.github/workflows/get-art
 
 ## Scenario
 
-TODO ARTICLE LINK ONCE DONE!!! 
-The code here is used as a supplement to the Medium article TODO CONFIRM TITLE 'Creating and Using a Basic Github App for Token Management in Workflows: A Guide'. Refer to that article for additional context and details.
+The code here is used as a supplement to the Medium article TODO LINK! 'A Comprehensive Guide to Creating and Using a Basic Github App for Token Management via Installation' . Refer to that article for additional context and details.
 
 In this scenario, developers are working on integrating installation access tokens to move away from personal access token management. Devs have complained about having to make their own PATs and having to remember to refresh them when they expire (among other reasons), so a solution where tokens could be generated programmatically and not tied to a user would be an ideal situation. For now, the only goal is to see if token generation works and that the token can be used to checkout the reusable workflow's repo in order to read the contents of a file on that repo. 
 
