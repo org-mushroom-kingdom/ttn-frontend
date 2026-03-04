@@ -1,0 +1,20 @@
+#  This workflow should be fired off when someone is trying to merge a feature branch into main or other release branches. 
+#  It is a caller workflow: It will pass the TODO ???  
+
+name: HTML Checks (TODOs) 
+
+on:
+    workflow_dispatch:
+    
+    pull_request:
+        types: [opened, synchronize]
+        branches: 
+            - 'main'
+            - 'preprod'
+            - 'release/**'
+
+jobs:
+    html-checker:
+        name: "HTML Check"
+        uses: "TBD"
+        # secrets? with?
