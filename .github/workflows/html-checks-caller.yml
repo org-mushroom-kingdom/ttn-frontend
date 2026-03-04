@@ -16,5 +16,5 @@ on:
 jobs:
     html-checker:
         name: "HTML Check"
-        uses: "TBD"
+        uses: TBD/tbd.yml@version
         # secrets? with?
